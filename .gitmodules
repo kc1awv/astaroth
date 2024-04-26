@@ -1,0 +1,36 @@
+[submodule "APRSGateway"]
+	path = APRSGateway
+	url = https://github.com/g4klx/APRSGateway.git
+[submodule "DAPNETGateway"]
+	path = DAPNETGateway
+	url = https://github.com/g4klx/DAPNETGateway.git
+[submodule "ircDDBGateway"]
+	path = ircDDBGateway
+	url = https://github.com/g4klx/ircDDBGateway.git
+[submodule "MMDVM_CM"]
+	path = MMDVM_CM
+	url = https://github.com/nostar/MMDVM_CM.git
+[submodule "DMRGateway"]
+	path = DMRGateway
+	url = https://github.com/g4klx/DMRGateway.git
+[submodule "M17Gateway"]
+	path = M17Gateway
+	url = https://github.com/g4klx/M17Gateway.git
+[submodule "MMDVMCal"]
+	path = MMDVMCal
+	url = https://github.com/g4klx/MMDVMCal.git
+[submodule "MMDVMHost"]
+	path = MMDVMHost
+	url = https://github.com/g4klx/MMDVMHost.git
+[submodule "NXDNClients"]
+	path = NXDNClients
+	url = https://github.com/g4klx/NXDNClients.git
+[submodule "P25Clients"]
+	path = P25Clients
+	url = https://github.com/g4klx/P25Clients.git
+[submodule "YSFClients"]
+	path = YSFClients
+	url = https://github.com/g4klx/YSFClients.git
+[submodule "DStarRepeater"]
+	path = DStarRepeater
+	url = https://github.com/g4klx/DStarRepeater.git

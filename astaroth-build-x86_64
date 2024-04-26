@@ -1,0 +1,170 @@
+#!/usr/bin/env bash
+
+SRC_DIR=$(pwd)
+DEST_DIR=$(pwd)/build
+CFG_DIR=$(pwd)/configs
+
+mkdir -p $DEST_DIR/{x86_64,x86_64/bin,x86_64/etc}
+
+# APRSGateway
+cd $SRC_DIR/APRSGateway &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/APRSGateway.ini $DEST_DIR/x86_64/etc &&
+     cp APRSGateway $DEST_DIR/x86_64/bin &&
+     make clean
+
+# MMDVMHost
+cd $SRC_DIR/MMDVMHost &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/MMDVM.ini $DEST_DIR/x86_64/etc &&
+     cp MMDVMHost $DEST_DIR/x86_64/bin &&
+     cp RemoteCommand $DEST_DIR/x86_64/bin &&
+     make clean
+
+# DAPNETGateway
+cd $SRC_DIR/DAPNETGateway &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/DAPNETGateway.ini $DEST_DIR/x86_64/etc &&
+     cp DAPNETGateway $DEST_DIR/x86_64/bin &&
+     make clean
+
+# DMRGateway
+cd $SRC_DIR/DMRGateway &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/DMRGateway.ini $DEST_DIR/x86_64/etc &&
+     cp DMRGateway $DEST_DIR/x86_64/bin &&
+     make clean
+
+# AMBEserver
+cd $SRC_DIR/AMBEServer &&
+     make clean &&
+     make -j$(nproc) &&
+     cp AMBEserver $DEST_DIR/x86_64/bin &&
+     make clean
+
+# DStarRepeater
+cd $SRC_DIR/DStarRepeater &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/DStarRepeater.ini $DEST_DIR/x86_64/etc &&
+     cp DStarRepeater/dstarrepeaterd $DEST_DIR/x86_64/bin &&
+     make clean
+
+# ircDDBGateway
+cd $SRC_DIR/ircDDBGateway &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/ircDDBGateway.ini $DEST_DIR/x86_64/etc &&
+     cp ircDDBGateway/ircddbgatewayd $DEST_DIR/x86_64/bin &&
+     cp APRSTransmit/aprstransmitd $DEST_DIR/x86_64/bin &&
+     cp RemoteControl/remotecontrold $DEST_DIR/x86_64/bin &&
+     cp StarNetServer/starnetserverd $DEST_DIR/x86_64/bin &&
+     cp TextTransmit/texttransmitd $DEST_DIR/x86_64/bin &&
+     cp TimerControl/timercontrold $DEST_DIR/x86_64/bin &&
+     cp TimeServer/timeserverd $DEST_DIR/x86_64/bin &&
+     cp VoiceTransmit/voicetransmitd $DEST_DIR/x86_64/bin &&
+     make clean
+
+# M17Gateway
+cd $SRC_DIR/M17Gateway &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/M17Gateway.ini $DEST_DIR/x86_64/etc &&
+     cp M17Gateway $DEST_DIR/x86_64/bin &&
+     make clean
+
+# MMDVMCal
+cd $SRC_DIR/MMDVMCal &&
+     make clean &&
+     make -j$(nproc) &&
+     cp MMDVMCal $DEST_DIR/x86_64/bin &&
+     make clean
+
+# DMR2YSF
+cd $SRC_DIR/MMDVM_CM/DMR2YSF &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/DMR2YSF.ini $DEST_DIR/x86_64/etc &&
+     cp DMR2YSF $DEST_DIR/x86_64/bin &&
+     make clean
+
+# DMR2NXDN
+cd $SRC_DIR/MMDVM_CM/DMR2NXDN &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/DMR2NXDN.ini $DEST_DIR/x86_64/etc &&
+     cp DMR2NXDN $DEST_DIR/x86_64/bin &&
+     make clean
+
+# YSF2DMR
+cd $SRC_DIR/MMDVM_CM/YSF2DMR &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/YSF2DMR.ini $DEST_DIR/x86_64/etc &&
+     cp YSF2DMR $DEST_DIR/x86_64/bin &&
+     make clean
+
+# YSF2P25
+cd $SRC_DIR/MMDVM_CM/YSF2P25 &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/YSF2P25.ini $DEST_DIR/x86_64/etc &&
+     cp YSF2P25 $DEST_DIR/x86_64/bin &&
+     make clean
+
+# YSF2NXDN
+cd $SRC_DIR/MMDVM_CM/YSF2NXDN &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/YSF2NXDN.ini $DEST_DIR/x86_64/etc &&
+     cp YSF2NXDN $DEST_DIR/x86_64/bin &&
+     make clean
+
+# NXDNClients
+cd $SRC_DIR/NXDNClients &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/NXDNGateway.ini $DEST_DIR/x86_64/etc &&
+     cp NXDNGateway/NXDNGateway $DEST_DIR/x86_64/bin &&
+     cp NXDNParrot/NXDNParrot $DEST_DIR/x86_64/bin &&
+     make clean
+
+# P25Clients
+cd $SRC_DIR/P25Clients &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/P25Gateway.ini $DEST_DIR/x86_64/etc &&
+     cp P25Gateway/P25Gateway $DEST_DIR/x86_64/bin &&
+     cp P25Parrot/P25Parrot $DEST_DIR/x86_64/bin &&
+     make clean
+
+# YSFClients
+cd $SRC_DIR/YSFClients &&
+     make clean &&
+     make -j$(nproc) &&
+     cp $CFG_DIR/DGIdGateway.ini $DEST_DIR/x86_64/etc &&
+     cp DGIdGateway/DGIdGateway $DEST_DIR/x86_64/bin &&
+     cp $CFG_DIR/YSFGateway.ini $DEST_DIR/x86_64/etc &&
+     cp YSFGateway/YSFGateway $DEST_DIR/x86_64/bin &&
+     cp YSFParrot/YSFParrot $DEST_DIR/x86_64/bin &&
+     make clean
+
+# NextionDriver
+cd $SRC_DIR/NextionDriver &&
+     make clean &&
+     make -j$(nproc) &&
+     cp NextionDriver $DEST_DIR/x86_64/bin &&
+     make clean
+
+# teensy_loader_cli
+cd $SRC_DIR/teensy_loader_cli &&
+     make clean &&
+     make -j$(nproc) &&
+     cp teensy_loader_cli $DEST_DIR/x86_64/bin &&
+     make clean
+
+#strip `find $DEST_DIR -type f -executable -exec file -i '{}' \; | grep 'x-executable; charset=binary' | sed 's/:.*//g'`
