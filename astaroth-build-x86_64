@@ -9,7 +9,7 @@ mkdir -p $DEST_DIR/{x86_64,x86_64/bin,x86_64/etc}
 # APRSGateway
 cd $SRC_DIR/APRSGateway &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/APRSGateway.ini $DEST_DIR/x86_64/etc &&
      cp APRSGateway $DEST_DIR/x86_64/bin &&
      make clean
@@ -17,7 +17,7 @@ cd $SRC_DIR/APRSGateway &&
 # MMDVMHost
 cd $SRC_DIR/MMDVMHost &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/MMDVM.ini $DEST_DIR/x86_64/etc &&
      cp MMDVMHost $DEST_DIR/x86_64/bin &&
      cp RemoteCommand $DEST_DIR/x86_64/bin &&
@@ -26,7 +26,7 @@ cd $SRC_DIR/MMDVMHost &&
 # DAPNETGateway
 cd $SRC_DIR/DAPNETGateway &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/DAPNETGateway.ini $DEST_DIR/x86_64/etc &&
      cp DAPNETGateway $DEST_DIR/x86_64/bin &&
      make clean
@@ -34,7 +34,7 @@ cd $SRC_DIR/DAPNETGateway &&
 # DMRGateway
 cd $SRC_DIR/DMRGateway &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/DMRGateway.ini $DEST_DIR/x86_64/etc &&
      cp DMRGateway $DEST_DIR/x86_64/bin &&
      make clean
@@ -42,14 +42,14 @@ cd $SRC_DIR/DMRGateway &&
 # AMBEserver
 cd $SRC_DIR/AMBEServer &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp AMBEserver $DEST_DIR/x86_64/bin &&
      make clean
 
 # DStarRepeater
 cd $SRC_DIR/DStarRepeater &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/DStarRepeater.ini $DEST_DIR/x86_64/etc &&
      cp DStarRepeater/dstarrepeaterd $DEST_DIR/x86_64/bin &&
      make clean
@@ -57,7 +57,7 @@ cd $SRC_DIR/DStarRepeater &&
 # ircDDBGateway
 cd $SRC_DIR/ircDDBGateway &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/ircDDBGateway.ini $DEST_DIR/x86_64/etc &&
      cp ircDDBGateway/ircddbgatewayd $DEST_DIR/x86_64/bin &&
      cp APRSTransmit/aprstransmitd $DEST_DIR/x86_64/bin &&
@@ -72,7 +72,7 @@ cd $SRC_DIR/ircDDBGateway &&
 # M17Gateway
 cd $SRC_DIR/M17Gateway &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/M17Gateway.ini $DEST_DIR/x86_64/etc &&
      cp M17Gateway $DEST_DIR/x86_64/bin &&
      make clean
@@ -80,14 +80,14 @@ cd $SRC_DIR/M17Gateway &&
 # MMDVMCal
 cd $SRC_DIR/MMDVMCal &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp MMDVMCal $DEST_DIR/x86_64/bin &&
      make clean
 
 # DMR2YSF
 cd $SRC_DIR/MMDVM_CM/DMR2YSF &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/DMR2YSF.ini $DEST_DIR/x86_64/etc &&
      cp DMR2YSF $DEST_DIR/x86_64/bin &&
      make clean
@@ -95,7 +95,7 @@ cd $SRC_DIR/MMDVM_CM/DMR2YSF &&
 # DMR2NXDN
 cd $SRC_DIR/MMDVM_CM/DMR2NXDN &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/DMR2NXDN.ini $DEST_DIR/x86_64/etc &&
      cp DMR2NXDN $DEST_DIR/x86_64/bin &&
      make clean
@@ -103,7 +103,7 @@ cd $SRC_DIR/MMDVM_CM/DMR2NXDN &&
 # YSF2DMR
 cd $SRC_DIR/MMDVM_CM/YSF2DMR &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/YSF2DMR.ini $DEST_DIR/x86_64/etc &&
      cp YSF2DMR $DEST_DIR/x86_64/bin &&
      make clean
@@ -111,7 +111,7 @@ cd $SRC_DIR/MMDVM_CM/YSF2DMR &&
 # YSF2P25
 cd $SRC_DIR/MMDVM_CM/YSF2P25 &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/YSF2P25.ini $DEST_DIR/x86_64/etc &&
      cp YSF2P25 $DEST_DIR/x86_64/bin &&
      make clean
@@ -119,7 +119,7 @@ cd $SRC_DIR/MMDVM_CM/YSF2P25 &&
 # YSF2NXDN
 cd $SRC_DIR/MMDVM_CM/YSF2NXDN &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/YSF2NXDN.ini $DEST_DIR/x86_64/etc &&
      cp YSF2NXDN $DEST_DIR/x86_64/bin &&
      make clean
@@ -127,7 +127,7 @@ cd $SRC_DIR/MMDVM_CM/YSF2NXDN &&
 # NXDNClients
 cd $SRC_DIR/NXDNClients &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/NXDNGateway.ini $DEST_DIR/x86_64/etc &&
      cp NXDNGateway/NXDNGateway $DEST_DIR/x86_64/bin &&
      cp NXDNParrot/NXDNParrot $DEST_DIR/x86_64/bin &&
@@ -136,7 +136,7 @@ cd $SRC_DIR/NXDNClients &&
 # P25Clients
 cd $SRC_DIR/P25Clients &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/P25Gateway.ini $DEST_DIR/x86_64/etc &&
      cp P25Gateway/P25Gateway $DEST_DIR/x86_64/bin &&
      cp P25Parrot/P25Parrot $DEST_DIR/x86_64/bin &&
@@ -145,7 +145,7 @@ cd $SRC_DIR/P25Clients &&
 # YSFClients
 cd $SRC_DIR/YSFClients &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp $CFG_DIR/DGIdGateway.ini $DEST_DIR/x86_64/etc &&
      cp DGIdGateway/DGIdGateway $DEST_DIR/x86_64/bin &&
      cp $CFG_DIR/YSFGateway.ini $DEST_DIR/x86_64/etc &&
@@ -156,14 +156,14 @@ cd $SRC_DIR/YSFClients &&
 # NextionDriver
 cd $SRC_DIR/NextionDriver &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp NextionDriver $DEST_DIR/x86_64/bin &&
      make clean
 
 # teensy_loader_cli
 cd $SRC_DIR/teensy_loader_cli &&
      make clean &&
-     make -j$(nproc) &&
+     make &&
      cp teensy_loader_cli $DEST_DIR/x86_64/bin &&
      make clean
 
