@@ -6,6 +6,8 @@ CFG_DIR=$(pwd)/configs
 
 mkdir -p $DEST_DIR/{x86_64,x86_64/bin,x86_64/etc}
 
+find . -name Version.h -exec sed -i -e "/const char\* VERSION =/ s/\"[^\"]*\"/\"$(date +'%Y%m%d')_astaroth-x86_64\"/" -e "/const wxString VERSION =/ s/wxT(\"[^\"]*\");/wxT(\"$(date +'%Y%m%d')_astaroth-x86_64\");/" {} \;
+
 # APRSGateway
 cd $SRC_DIR/APRSGateway &&
      make clean &&
